@@ -6,28 +6,43 @@
 			"palette": [
 				{
 					"slug": "background",
-					"color": "#ffffff",
+					"color": "var(--color-background)",
+					"name": "Background"
+				},
+				{
+					"slug": "background-alt",
+					"color": "var(--color-background-alt)",
 					"name": "Background"
 				},
 				{
 					"slug": "foreground",
-					"color": "#404040",
+					"color": "var(--color-foreground)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "var(--color-foreground-alt)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "line",
+					"color": "var(--color-line)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "line-alt",
+					"color": "var(--color-line-alt)",
 					"name": "Foreground"
 				},
 				{
 					"slug": "primary",
-					"color": "#b91c1c",
+					"color": "var(--color-primary)",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#15803d",
+					"color": "var(--color-secondary)",
 					"name": "Secondary"
-				},
-				{
-					"slug": "tertiary",
-					"color": "#0369a1",
-					"name": "Tertiary"
 				}
 			]
 		},

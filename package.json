@@ -10,6 +10,7 @@
 		"@wordpress/prettier-config": "^3.12.0",
 		"adm-zip": "^0.5.12",
 		"archiver": "^7.0.1",
+		"browser-sync": "^3.0.2",
 		"chokidar-cli": "^3.0.0",
 		"cross-env": "^7.0.3",
 		"esbuild": "^0.20.2",
@@ -22,6 +23,7 @@
 		"postcss-import-ext-glob": "^2.1.1",
 		"prettier": "^3.2.5",
 		"prettier-plugin-tailwindcss": "^0.5.13",
+		"sass": "^1.72.0",
 		"tailwindcss": "^3.4.3",
 		"touch": "^3.1.0"
 	},
@@ -37,6 +39,7 @@
 		"watch:tailwind:editor:extra": "npm run development:tailwind:editor:extra -- --watch",
 		"watch:tailwind:themejson": "chokidar \"./theme/theme.json\" -c \"nodetouch ./tailwind/tailwind.config.js\"",
 		"watch:esbuild": "npm run development:esbuild -- --watch",
+		"watch:browser-sync": "browser-sync start --proxy \"seed3.local\" --files \"theme\" --no-notify --no-inject-changes",
 		"watch": "run-p \"watch:**\"",
 		"lint:eslint": "npx eslint theme/",
 		"lint:prettier": "npx prettier --check .",
@@ -50,7 +53,7 @@
 		"production:esbuild": "npm run development:esbuild -- --minify",
 		"production": "run-p \"production:**\"",
 		"prod": "npm run production",
-		"zip": "node node_scripts/zip.js _tw",
+		"zip": "node node_scripts/zip.js seed3",
 		"bundle": "run-s production zip"
 	},
 	"prettier": "@wordpress/prettier-config"

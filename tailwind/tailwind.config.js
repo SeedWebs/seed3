@@ -2,6 +2,7 @@
 const includePreflight = 'editor' === process.env._TW_TARGET ? false : true;
 
 module.exports = {
+	darkMode: 'selector',
 	presets: [
 		// Manage Tailwind Typography's configuration in a separate file.
 		require('./tailwind-typography.config.js'),

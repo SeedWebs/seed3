@@ -10,14 +10,10 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<?php get_template_part( 'template-parts/layout/footer', 'content' ); ?>
-
+</div><!-- #content -->
+<?php get_template_part('parts/layout/footer'); ?>
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
-
 </body>
+
 </html>

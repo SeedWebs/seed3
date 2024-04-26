@@ -8,3 +8,17 @@
  * For esbuild documentation, please see:
  * https://esbuild.github.io/
  */
+document.addEventListener(
+	'click',
+	function (e) {
+		if (e.target.closest('.nav-btn')) {
+			document.body.classList.toggle('nav-open');
+		}
+		if (e.target.closest('.dark-btn')) {
+			const isDark = document.documentElement.classList.contains('dark');
+			localStorage.setItem('theme', isDark ? 'light' : 'dark');
+			document.documentElement.classList.toggle('dark');
+		}
+	},
+	false
+);

@@ -1,0 +1,134 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ *
+ * “Add things like base typography styles [or] opinionated global resets.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-base-styles
+ */
+
+/**
+ * This uses the background and foreground colors declared in the
+ * `theme.json` file and is applied both to the frontend and in the block
+ * editor.
+*/
+
+@layer base {
+
+  :root {
+    --color-primary: #004999;
+		--color-secondary:#0099ff;
+		--color-foreground: #111827; 		/* Gray 900 */
+		--color-foreground-alt: #6b7280; /* Gray 500 */
+		--color-background: #ffffff; 		/* White */
+		--color-background-alt: #f3f4f6; /* Gray 100 */
+		--color-line: #d1d5db; 					/* Gray 300 */
+		--color-line-alt: #e5e7eb; 			/* Gray 200 */
+  }
+
+  :root[class~="dark"] {
+		--color-primary: #006fe6;
+		--color-secondary:#0099ff;
+		--color-foreground: #f3f4f6;			/* Gray 100 */
+		--color-foreground-alt: #d1d5db;	/* Gray 300 */
+		--color-background: #030712;			/* Gray 950 */
+		--color-background-alt: #111827;	/* Gray 900 */
+		--color-line: #4b5563; 					/* Gray 600 */
+		--color-line-alt: #4b5563; 			/* Gray 600 */
+  }
+}
+
+/* INPUT */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+select,
+input[type="file"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+textarea {
+	@apply block transition w-full rounded-md border-0 py-1.5 px-2 bg-background text-foreground leading-6 shadow-sm ring-1 ring-inset ring-line placeholder:text-foreground-alt focus:ring-2 focus:ring-primary;
+}
+select {
+	@apply h-9 py-1;
+}
+input[type="submit"] {
+	@apply transition duration-300 cursor-pointer rounded-md border-0 py-1.5 px-4 bg-primary text-white shadow-sm leading-6 hover:bg-secondary;
+}
+
+body {
+	@apply bg-background-alt text-foreground font-sans antialiased;
+}
+#page {
+	@apply flex flex-col min-h-screen;
+}
+
+hr {
+	border-color: var(--color-line);
+}
+/* NAV */
+.nav-open {
+	@apply overflow-hidden;
+	#masthead {
+		@apply overflow-y-auto max-h-screen;
+	}
+	@media screen and (max-width: 1023px) {
+		#nav {
+			@apply max-h-screen pt-4 opacity-100 h-auto;
+			transition: padding 0.5s ease, max-height 0.2s ease;
+		}
+	}
+}
+.nav-btn {
+	@apply h-8 w-9 cursor-pointer relative p-3;
+	em {
+		@apply z-10 -mt-px top-1/2;
+		&,
+		&::before,
+		&::after {
+			@apply block pointer-events-none rounded-full bg-current h-0.5 absolute rotate-0 left-0 right-0;
+			content: "";
+			transition: top 0.3s 0.15s, left 0.1s, background-color 0.3s 0.2s, transform 0.2s;
+		}
+		&::before {
+			top: -6px;
+		}
+		& {
+			left: 6px;
+			right: 6px;
+		}
+		&::after {
+			top: 6px;
+		}
+	}
+	.nav-open & {
+		em {
+			@apply bg-transparent;
+			&,
+			&::after,
+			&::before {
+				transition: top 0.2s, left 0.2s, background-color 0.2s, transform 0.2s 0.15s;
+			}
+			&::before,
+			&::after {
+				@apply left-0 right-0 top-0 bg-current;
+			}
+			&::before {
+				@apply -rotate-45;
+			}
+			&::after {
+				@apply rotate-45;
+			}
+		}
+	}
+}

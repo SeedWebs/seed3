@@ -1,0 +1,35 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `utilities` layer
+ *
+ * Add your own utility classes to this theme. Complex utility classes should
+ * be added using Tailwind’s plugin system:
+ *
+ * https://tailwindcss.com/docs/plugins#adding-utilities
+ */
+
+.post-edit-link {
+	@apply px-2 py-1 fixed left-4 bottom-4 leading-none z-20 text-xs border border-foreground rounded hover:bg-primary hover:text-white hover:border-primary;
+}
+.container {
+	@apply mx-auto px-4;
+}
+
+@media (max-width: 1023px) {
+	._desktop {
+		@apply !hidden;
+	}
+}
+
+@media (min-width: 1024px) {
+	._mobile {
+		@apply !hidden;
+	}
+}
+
+body.logged-in ._guest,
+body:not(.logged-in) ._member,
+.hide,
+._th:not(:lang(th)),
+._en:not(:lang(en-US)) {
+	@apply !hidden;
+}

@@ -7,14 +7,14 @@
 /**
  * This injects custom `@font-face` rules.
  */
-@import "./custom/fonts.css";
+@import "./custom/fonts.scss";
 
 /**
  * This injects Tailwind's base styles and any base styles registered by
  * plugins, then adds custom base styles.
  */
 @import "tailwindcss/base";
-@import "./custom/base.css";
+@import "./custom/base.scss";
 
 /**
  * This injects Tailwind's component classes and any component classes
@@ -26,12 +26,12 @@
  * JavaScript components or WordPress plugins.
  */
 @import "tailwindcss/components";
-@import-glob "./custom/components/**/!(components).css";
-@import "./custom/components/components.css";
+@import-glob "./custom/components/**/!(components).scss";
+@import "./custom/components/components.scss";
 
 /**
  * This injects Tailwind's utility classes and any utility classes registered
  * by plugins, then adds custom utility classes.
  */
 @import "tailwindcss/utilities";
-@import "./custom/utilities.css";
+@import "./custom/utilities.scss";

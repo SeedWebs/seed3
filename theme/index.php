@@ -14,40 +14,37 @@
 
 get_header();
 ?>
+<section id="primary">
+    <main id="main" class="container">
+        <?php
+        if (have_posts()) {
 
-	<section id="primary">
-		<main id="main">
+            if (is_home() && !is_front_page()) :
+                ?>
+        <header class="entry-header">
+            <h1 class="entry-title"><?php single_post_title(); ?></h1>
+        </header>
+        <?php
+            endif;
 
-		<?php
-		if ( have_posts() ) {
+            // Load posts loop.
+            while (have_posts()) {
+                the_post();
+                get_template_part('parts/content/content');
+            }
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php single_post_title(); ?></h1>
-				</header><!-- .entry-header -->
-				<?php
-			endif;
+            // Previous/next page navigation.
+            _tw_the_posts_navigation();
 
-			// Load posts loop.
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( 'template-parts/content/content' );
-			}
+        } else {
 
-			// Previous/next page navigation.
-			_tw_the_posts_navigation();
+            // If no content, include the "No posts found" template.
+            get_template_part('parts/content/content', 'none');
 
-		} else {
-
-			// If no content, include the "No posts found" template.
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		}
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
+        }
+?>
+    </main>
+</section>
 <?php
 get_footer();
+?>
