@@ -1,48 +1,49 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
+	"version": 3,
 	"settings": {
 		"color": {
 			"palette": [
 				{
-					"slug": "background",
-					"color": "var(--color-background)",
-					"name": "Background"
-				},
-				{
-					"slug": "background-alt",
-					"color": "var(--color-background-alt)",
-					"name": "Background"
-				},
-				{
-					"slug": "foreground",
-					"color": "var(--color-foreground)",
-					"name": "Foreground"
-				},
-				{
-					"slug": "foreground-alt",
-					"color": "var(--color-foreground-alt)",
-					"name": "Foreground"
-				},
-				{
-					"slug": "line",
-					"color": "var(--color-line)",
-					"name": "Foreground"
-				},
-				{
-					"slug": "line-alt",
-					"color": "var(--color-line-alt)",
-					"name": "Foreground"
-				},
-				{
 					"slug": "primary",
-					"color": "var(--color-primary)",
+					"color": "var(--color-primary, #004999)",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "var(--color-secondary)",
+					"color": "var(--color-secondary, #0099ff)",
 					"name": "Secondary"
+				},
+				{
+					"slug": "text",
+					"color": "var(--color-text, #111827)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "text-alt",
+					"color": "var(--color-text-alt, #6b7280)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "bg",
+					"color": "var(--color-bg, #ffffff)",
+					"name": "Background"
+				},
+				{
+					"slug": "background-alt",
+					"color": "var(--color-bg-alt, #f3f4f6)",
+					"name": "Background"
+				},
+				
+				{
+					"slug": "line",
+					"color": "var(--color-line, #d1d5db)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "line-alt",
+					"color": "var(--color-line-alt, #e5e7eb)",
+					"name": "Foreground"
 				}
 			]
 		},

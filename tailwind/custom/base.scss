@@ -13,27 +13,26 @@
 */
 
 @layer base {
-
+	/* Plese also update in theme.json */
   :root {
     --color-primary: #004999;
 		--color-secondary:#0099ff;
-		--color-foreground: #111827; 		/* Gray 900 */
-		--color-foreground-alt: #6b7280; /* Gray 500 */
-		--color-background: #ffffff; 		/* White */
-		--color-background-alt: #f3f4f6; /* Gray 100 */
-		--color-line: #d1d5db; 					/* Gray 300 */
-		--color-line-alt: #e5e7eb; 			/* Gray 200 */
+		--color-text: #111827; 		/* Gray 900 */
+		--color-text-alt: #6b7280; /* Gray 500 */
+		--color-bg: #ffffff; 			/* White */
+		--color-bg-alt: #f3f4f6; 	/* Gray 100 */
+		--color-line: #d1d5db; 		/* Gray 300 */
+		--color-line-alt: #e5e7eb; /* Gray 200 */
   }
-
   :root[class~="dark"] {
 		--color-primary: #006fe6;
 		--color-secondary:#0099ff;
-		--color-foreground: #f3f4f6;			/* Gray 100 */
-		--color-foreground-alt: #d1d5db;	/* Gray 300 */
-		--color-background: #030712;			/* Gray 950 */
-		--color-background-alt: #111827;	/* Gray 900 */
-		--color-line: #4b5563; 					/* Gray 600 */
-		--color-line-alt: #4b5563; 			/* Gray 600 */
+		--color-text: #f3f4f6;			/* Gray 100 */
+		--color-text-alt: #d1d5db;	/* Gray 300 */
+		--color-bg: #030712;				/* Gray 950 */
+		--color-bg-alt: #111827;		/* Gray 900 */
+		--color-line: #4b5563; 		/* Gray 600 */
+		--color-line-alt: #4b5563; /* Gray 600 */
   }
 }
 
