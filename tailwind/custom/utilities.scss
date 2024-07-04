@@ -8,7 +8,7 @@
  */
 
 .post-edit-link {
-	@apply px-2 py-1 fixed left-4 bottom-4 leading-none z-20 text-xs border border-foreground rounded hover:bg-primary hover:text-white hover:border-primary;
+	@apply px-2 py-1 fixed left-4 bottom-4 leading-none z-20 text-xs border border-text rounded hover:bg-primary hover:text-white hover:border-primary;
 }
 .container {
 	@apply mx-auto px-4;
