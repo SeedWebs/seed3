@@ -7,8 +7,8 @@ add_filter('show_admin_bar', '__return_false');
 /**
  * Auto create home page
  */
-add_action('after_switch_theme', 'plant_create_home_page');
-function plant_create_home_page()
+add_action('after_switch_theme', 's_create_home_page');
+function s_create_home_page()
 {
     if (!get_option('page_on_front')) {
         $qr_slug = get_posts(['post_type' => 'page', 'name' => 'home', 'post_status' => 'all']);
@@ -29,4 +29,19 @@ function plant_create_home_page()
             }
         }
     }
+}
+
+/*
+* Admin CSS
+*/
+add_action('admin_head', 's_admin_head');
+
+function s_admin_head()
+{
+    echo '<style>
+    #wp-admin-bar-wp-logo,
+    #footer-left {
+        display: none;
+    } 
+  </style>';
 }

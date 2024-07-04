@@ -5,14 +5,14 @@
 				<?= s_icon('logo', 24) ?>
 				<p class="text-lg font-medium"><?php bloginfo('name'); ?></p>
 			</a>
-			<button class="nav-btn border-2 border-current rounded px-2 py-1 lg:hidden text-current" title="Menu">
+			<button class="nav-btn border-[1.5px] border-current rounded px-2 py-1 lg:hidden text-current" title="Menu">
 				<em></em>
 			</button>
 		</div>
 		<nav id="nav" class="opacity-0 h-0 overflow-hidden [&_a]:block [&_a]:py-1 lg:[&_ul]:flex lg:[&_ul]:gap-5 lg:opacity-100 lg:h-auto lg:flex lg:ml-auto">
 			<?php wp_nav_menu(['theme_location' => 'menu-1']);?>
 		</nav>
-		<div class="dark-btn cursor-pointer absolute h-8 flex items-center top-0 right-16 lg:relative lg:right-0">
+		<div class="dark-btn cursor-pointer absolute flex items-center top-1 right-16 lg:relative lg:right-0 lg:top-0">
 			<span class="dark:hidden"><?= s_icon('sun', 20); ?></span>
 			<span class="hidden dark:block"><?= s_icon('moon', 20); ?></span>
 		</div>

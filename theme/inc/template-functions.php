@@ -6,12 +6,13 @@
  */
 
 /**
-* Add more files
-*/
+ * Add more files
+ */
+require get_template_directory() . '/inc/admin-nocomments.php';
 require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/seed.php';
 require get_template_directory() . '/inc/icons.php';
-require get_template_directory() . '/inc/metabox.php';
+
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.

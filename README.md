@@ -11,12 +11,9 @@ Developed by [Seed Web](https://seedwebs.com/). Forked form [\_tw](https://githu
 
 - SCSS Support
 - Header/Footer Template
-
-Soon..
-
 - Dark mode Support
 - Frontend Member System
-- Custom Field by MetaBox.io
+- Admin - Disable Comments
 
 ---
 

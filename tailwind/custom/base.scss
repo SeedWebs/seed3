@@ -90,25 +90,25 @@ hr {
 	}
 }
 .nav-btn {
-	@apply h-8 w-9 cursor-pointer relative p-3;
+	@apply h-6 w-7 cursor-pointer relative border-[1.5px] border-current text-current rounded;
 	em {
 		@apply z-10 -mt-px top-1/2;
 		&,
 		&::before,
 		&::after {
-			@apply block pointer-events-none rounded-full bg-current h-0.5 absolute rotate-0 left-0 right-0;
+			@apply block pointer-events-none rounded-full bg-current h-[1.5px] absolute rotate-0 left-0 right-0;
 			content: "";
 			transition: top 0.3s 0.15s, left 0.1s, background-color 0.3s 0.2s, transform 0.2s;
 		}
 		&::before {
-			top: -6px;
+			top: -5px;
 		}
 		& {
 			left: 6px;
 			right: 6px;
 		}
 		&::after {
-			top: 6px;
+			top: 5px;
 		}
 	}
 	.nav-open & {
