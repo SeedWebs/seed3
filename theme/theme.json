@@ -30,7 +30,7 @@
 					"name": "Background"
 				},
 				{
-					"slug": "background-alt",
+					"slug": "bg-alt",
 					"color": "var(--color-bg-alt, #f3f4f6)",
 					"name": "Background"
 				},

@@ -1,5 +1,5 @@
 <?php defined('ABSPATH') || exit; ?>
-<section class="mb-5 mt-16 bg-background shadow rounded max-w-lg mx-auto pt-4 px-4 pb-8 md:px-8">
+<section class="mb-5 mt-16 bg-bg shadow rounded max-w-lg mx-auto pt-4 px-4 pb-8 md:px-8">
     <div class="-mt-16">
         <?php echo s_profile(); ?>
     </div>

@@ -1,7 +1,7 @@
 <?php defined('ABSPATH') || exit; ?>
 <section>
     <h1 class="text-2xl font-bold text-center my-5">Login with Email</h1>
-    <div class="my-5 bg-background shadow rounded max-w-sm mx-auto p-4 md:p-8">
+    <div class="my-5 bg-bg shadow rounded max-w-sm mx-auto p-4 md:p-8">
         <form name="loginform" id="loginform" action="/wp-login.php" method="post" class="grid gap-3 rounded-md *:grid *:gap-2">
             <p class="login-username">
                 <label for="user_login">Email</label>

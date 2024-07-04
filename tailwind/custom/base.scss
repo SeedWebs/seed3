@@ -56,7 +56,7 @@ input[type="tel"],
 input[type="password"],
 input[type="search"],
 textarea {
-	@apply block transition w-full rounded-md border-0 py-1.5 px-2 bg-background text-foreground leading-6 shadow-sm ring-1 ring-inset ring-line placeholder:text-foreground-alt focus:ring-2 focus:ring-primary;
+	@apply block transition w-full rounded-md border-0 py-1.5 px-2 bg-bg text-text leading-6 shadow-sm ring-1 ring-inset ring-line placeholder:text-text-alt focus:ring-2 focus:ring-primary;
 }
 select {
 	@apply h-9 py-1;
@@ -66,7 +66,7 @@ input[type="submit"] {
 }
 
 body {
-	@apply bg-background-alt text-foreground font-sans antialiased;
+	@apply bg-bg-alt text-text font-sans antialiased;
 }
 #page {
 	@apply flex flex-col min-h-screen;
